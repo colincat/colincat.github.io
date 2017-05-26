@@ -1,1 +1,49 @@
-theme: jekyll-theme-cayman
+# Basic
+title: Colin Cat
+subtitle: #不积跬步无以至千里,不积小流无以成江河
+welcome_message: <a href="http://colincat.com" target="_blank">Create by Colin Cat </a>
+description: 求知若渴,虚怀若愚,在未来,请和我一起成长
+creator: <a href="http://colincat.com">@colincat</a>
+
+url: "http://colincat.com"
+
+permalink: /:year/:month/:title/
+
+# Format
+highlighter: rouge
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: red
+
+# The blog button should not be removed.
+blog_button:
+    title: Blog
+    description: Visit blog
+
+# Navigation buttons in the front page.
+nav:
+    - {title: Projects, description: My Projects, url: 'http://colincat.com'}
+    # - {title: Another Button, description: A button, url: 'http://example.com'}
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "page/:num/"
+
+# Comment
+comment:
+    disqus: vno-jekyll
+    # duoshuo: 
+    
+# Social
+social:
+    #weibo: colincat
+    #github: colincat
+    #twitter: colincat
+    #gplus: colincat
+    #mail: colincat
+
+# Google Analytics
+ga:
+    # id: your_ga_id
+    # host: your_host
