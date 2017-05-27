@@ -1,49 +1,88 @@
-# Basic
+# Site settings
 title: Colin Cat
-subtitle: #不积跬步无以至千里,不积小流无以成江河
-welcome_message: <a href="http://colincat.com" target="_blank">Create by Colin Cat </a>
-description: 求知若渴,虚怀若愚,在未来,请和我一起成长
-creator: <a href="http://colincat.com">@colincat</a>
+SEOTitle: 你的博客 | Colin Cat
+header-img: img/home-bg.jpg
+email: ""
+description: ""
+keyword: ""
+url: "http://colincat.com"              # your host, for absolute URL
+baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
-url: "http://colincat.com"
 
-permalink: /:year/:month/:title/
 
-# Format
+# SNS settings
+RSS: false
+#weibo_username:     colincat
+#zhihu_username:     colincat
+#github_username:    colincat
+#twitter_username:  colincat
+#facebook_username:  colincat
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
-
-# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color: red
-
-# The blog button should not be removed.
-blog_button:
-    title: Blog
-    description: Visit blog
-
-# Navigation buttons in the front page.
-nav:
-    - {title: Projects, description: My Projects, url: 'http://colincat.com'}
-    # - {title: Another Button, description: A button, url: 'http://example.com'}
-
-# Pagination
-gems: [jekyll-paginate]
+permalink: pretty
 paginate: 10
-paginate_path: "page/:num/"
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
-# Comment
-comment:
-    disqus: vno-jekyll
-    # duoshuo: 
-    
-# Social
-social:
-    #weibo: colincat
-    #github: colincat
-    #twitter: colincat
-    #gplus: colincat
-    #mail: colincat
 
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# Disqus settings
+#disqus_username: _your_disqus_short_name_
+
+# Duoshuo settings
+duoshuo_username: colincat
+# Share component is depend on Comment so we can NOT use share only.
+duoshuo_share: false                     # set to false if you want to use Comment without Sharing
+
+
+
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
-ga:
-    # id: your_ga_id
-    # host: your_host
+ga_track_id: 'UA-xxxxxx-xx'            # Format: UA-xxxxxx-xx
+ga_domain: colincat.com
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "舔一舔爪子,想一想人生"
+sidebar-avatar: /img/avatar-colincat.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Friends
+friends: [
+    {
+        title: "Hux Blog",
+        href: "http://huangxuan.me"
+    }
+]
